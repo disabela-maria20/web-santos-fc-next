@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 @layer base {
-  *{
+  * {
     @apply font-roboto;
   }
+
   h1 {
-    @apply  text-38 sm:text-45 md:text-55;
+    @apply text-38 sm:text-45 md:text-55;
   }
 
   h2 {
@@ -15,7 +16,7 @@
   }
 
   h3 {
-    @apply  font-semibold text-26 sm:text-31;
+    @apply font-semibold text-26 sm:text-31;
   }
 
   p,
@@ -26,6 +27,7 @@
   img {
     @apply max-w-full h-auto;
   }
+
   a {
     @apply text-15;
   }
@@ -35,80 +37,70 @@
   .line {
     @apply w-full bg-white h-2 opacity-50 rounded relative transition transform;
   }
+
   .line.active:nth-child(1) {
     @apply opacity-100 transition transform ease-in rotate-45 duration-300 top-4/3 delay-150;
   }
+
   .line.active:nth-child(2) {
     @apply hidden transition ease-in duration-300;
   }
+
   .line.active:nth-child(3) {
-    @apply h-2 opacity-100 transition transform ease-in duration-300 -rotate-45 -top-4/3	delay-150;
+    @apply h-2 opacity-100 transition transform ease-in duration-300 -rotate-45 -top-4/3 delay-150;
   }
+
   .nav {
     @apply flex sm:justify-between sm:items-center items-center flex-col md:flex-row transition transform ease-in w-full;
   }
+
   .link-outline-black {
-    @apply relative  font-bold inline-block capitalize text-18 
-      after:content-[""] after:mt-0 after:absolute after:bottom-0 after:bg-yellow after:w-full after:h-2 after:right-0 after:z-40;
+    @apply relative font-bold inline-block capitalize text-18 after:content-[""] after:mt-0 after:absolute after:bottom-0 after:bg-yellow after:w-full after:h-2 after:right-0 after:z-40;
   }
+
   .icon-dev {
     @apply w-[100px] h-[100px] m-auto !important;
   }
+
   .input-subject {
-    @apply bg-gray-800 py-4 text-gray-200 border-none w-full h-45 rounded-sm px-13  text-15 sm:text-18;
+    @apply bg-gray-800 py-4 text-gray-200 border-none w-full h-45 rounded-sm px-13 text-15 sm:text-18;
   }
+
   .input-subject-textarea {
-    @apply bg-gray-800 py-4 text-gray-200 border-none w-full h-[140px]  rounded-sm px-13 text-15 sm:text-18;
+    @apply bg-gray-800 py-4 text-gray-200 border-none w-full h-[140px] rounded-sm px-13 text-15 sm:text-18;
   }
+
   .btn-contacts {
     @apply bg-yellow-100 w-full h-45 rounded-sm uppercase transition-opacity hover:opacity-80;
   }
+
   .text-error {
     @apply text-red-500 order-none;
   }
+
   .btn-modal {
-    @apply bg-yellow-100 px-18 py-10 h-45 rounded-sm  text-15 sm:text-18;
+    @apply bg-yellow-100 px-18 py-10 h-45 rounded-sm text-15 sm:text-18;
   }
 }
 
 @layer utilities {
-  .animateSquare {
-    animation: animate 5s linear infinite;
-  }
-  @keyframes animate {
-    0% {
-      transform: scale(0) translateY(0) rotate(0deg);
-      opacity: 0;
-    }
-    10% {
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1) translateY(700%) rotate(360deg);
-    }
-  }
-  .square {
-    height: 100vh;
-    background-position-y: 90vh;
-    background-position-x: unset;
-  }
-  .block-project {
-    background: black;
-    transition: 0.3s;
-  }
-  @media (min-width: 768px) {
-    .block-project:hover {
-      transform: scale(1.2);
-      position: relative;
-      z-index: 999;
-    }
+  .square h3 span {
+    display: inline-block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background-image: linear-gradient(90deg, #000, #2b2b2b);
+    transition: width 300ms ease-out, ;
   }
 
-  .block-project-img {
-    opacity: 0.4;
+  .square:hover h3 span {
+    width: 60px;
   }
 
-  .grecaptcha-badge {
-    visibility: hidden;
-  }
+
+}
+
+.swiper {
+  overflow: visible !important;
 }

@@ -84,7 +84,8 @@ const config: Config = {
         'roboto': ['var(--font-roboto)'],
       },
       backgroundImage: {
-       "header": "url('/img/bg.png')"
+       "header": "url('/img/bg.png')", 
+       "santos": "url(/img/bg-santos.png)"
       },
       animation: {
         'movie': 'movie 2s linear infinite forwards',
