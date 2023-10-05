@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Title } from '@/components/atoms'
+import { SvgMetodologia, Title } from '@/components/atoms'
 import { Slide } from '@/components/molecules'
 import React from 'react'
 
@@ -74,6 +74,16 @@ const Main = () => {
         <div className="container m-auto px-15 py-66 md:py-95">
           <Title>Pilares</Title>
           <Slide />
+        </div>
+      </section>
+      <section>
+        <div className="container m-auto px-15">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-45">
+            <div className="lg:col-span-6">
+              <SvgMetodologia/>
+            </div>
+            <div className="lg:col-span-6">a</div>
+          </div>
         </div>
       </section>
     </main>
