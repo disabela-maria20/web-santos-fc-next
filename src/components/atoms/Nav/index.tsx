@@ -18,11 +18,10 @@ const Nav = ({ open }: INavProps): JSX.Element => {
 				{link.map(({name, id}) => (
 					<li className="py-22  md:py-0" key={id}>
 						<AnchorLink href={id}>
-							<span className="text-white font-bold text-15 md:text-22 md:px-26 hover:text-yellow-100 transition-all font-roboto">{name}</span>
+							<span className="text-white font-bold text-15 md:text-18 md:px-26 hover:text-yellow-100 transition-all font-roboto">{name}</span>
 						</AnchorLink>
 					</li>
 				))}
-
 			</ul>
 		</nav>
 	)

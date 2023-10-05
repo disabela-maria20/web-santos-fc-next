@@ -3,7 +3,7 @@ import { ITitleProps } from './type'
 
 const Title = ({ children }: ITitleProps): JSX.Element => {
   return (
-    <h2 className='text-38 md:text-55 uppercase font-bold'>{children}</h2>
+    <h2 className='text-31 md:text-38 uppercase font-bold'>{children}</h2>
   )
 }
 

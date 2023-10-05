@@ -1,9 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode } from 'swiper/modules';
+import { FreeMode, Scrollbar } from 'swiper/modules';
 
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
+import 'swiper/css/scrollbar';
 
 type TypeSlide = {
   id: number,
@@ -22,8 +23,8 @@ const Slide = () => {
   for (let index = 0; index < 2; index++) {
     slide_item.push(
       list.map(({ id, title, paragraph }) => (
-        <SwiperSlide key={id} className='mt-22'>
-          <div className='bg-gradient-to-r from-yellow-100 to-yellow-200 rounded-xl overflow-auto p-18'>
+        <SwiperSlide key={id} className='mt-22 '>
+          <div className='bg-gradient-to-r touch-pan-y from-yellow-100 to-yellow-200 rounded-xl overflow-auto p-18'>
             <h3 className='bg-gradient-to-r from-black to-gray-200 text-white text-center py-6 rounded-xl'>{title}</h3>
             <p className='pt-18'>{paragraph}</p>
           </div>
@@ -40,7 +41,11 @@ const Slide = () => {
       pagination={{
         clickable: true,
       }}
-      modules={[FreeMode]}
+      scrollbar={{
+        hide: true,
+      }}
+      // centeredSlides={true}
+      modules={[FreeMode, Scrollbar]}
       breakpoints={{
         640: {
           slidesPerView: 2,

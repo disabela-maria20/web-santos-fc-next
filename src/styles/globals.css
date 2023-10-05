@@ -21,7 +21,7 @@
 
   p,
   label {
-    @apply text-15 sm:text-18 leading-paragraph;
+    @apply text-15 sm:text-[17px] xxl:text-18 leading-paragraph;
   }
 
   img {
