@@ -1,5 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode } from 'swiper/modules';
+
+
 import 'swiper/css';
+import 'swiper/css/free-mode';
 
 type TypeSlide = {
   id: number,
@@ -32,9 +36,11 @@ const Slide = () => {
     <Swiper
       slidesPerView={1}
       spaceBetween={10}
+      freeMode={true}
       pagination={{
         clickable: true,
       }}
+      modules={[FreeMode]}
       breakpoints={{
         640: {
           slidesPerView: 2,
