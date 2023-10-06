@@ -107,7 +107,18 @@
 
 .st0 {
   fill: #737373;
+  transition: all 300ms ease-out;
 }
+
+.st0.active {
+  fill: #FFCB00;
+}
+
+.st0.active + g path{
+  fill: #000;
+}
+
+
 
 .st1 {
   fill: #231F20;
@@ -119,4 +130,8 @@
 
 .st3 {
   fill: #FFFFFF;
+}
+
+circle {
+  cursor: pointer;
 }

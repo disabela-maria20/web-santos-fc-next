@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Scrollbar } from 'swiper/modules';
 
@@ -25,7 +26,13 @@ const Slide = () => {
       list.map(({ id, title, paragraph }) => (
         <SwiperSlide key={id} className='mt-22 '>
           <div className='bg-gradient-to-r touch-pan-y from-yellow-100 to-yellow-200 rounded-xl overflow-auto p-18'>
-            <h3 className='bg-gradient-to-r from-black to-gray-200 text-white text-center py-6 rounded-xl'>{title}</h3>
+            <div className='flex justify-between py-6 rounded-xl items-center bg-gradient-to-r from-black to-gray-200 text-white text-center '>
+              <img src="/img/pointed-star.png" alt="Estrela" className='p-15' />
+              <h3 className=''>
+                {title}
+              </h3>
+              <img src="/img/pointed-star.png" alt="Estrela" className='p-15' />
+            </div>
             <p className='pt-18'>{paragraph}</p>
           </div>
         </SwiperSlide>

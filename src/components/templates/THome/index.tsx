@@ -1,13 +1,10 @@
-/* eslint-disable react/jsx-no-undef */
-
-import { Header, Main } from '@/components/organisms'
-import React from 'react'
+import { Footer, Header, Main } from '@/components/organisms'
 
 const THome = (): JSX.Element => {
   return <>
     <Header />
     <Main/>
-    {/* <Footer /> */}
+    <Footer />
   </>
 }
 

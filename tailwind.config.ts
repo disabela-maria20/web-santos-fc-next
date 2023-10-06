@@ -85,7 +85,8 @@ const config: Config = {
       },
       backgroundImage: {
        "header": "url('/img/bg.png')", 
-       "santos": "url(/img/bg-santos.png)"
+       "santos": "url(/img/bg-santos.png)",
+       "retangulo": "url(/img/retangulo.png)"
       },
       animation: {
         'movie': 'movie 2s linear infinite forwards',
