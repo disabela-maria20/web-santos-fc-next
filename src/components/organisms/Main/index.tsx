@@ -89,7 +89,7 @@ const Main = () => {
               <Title>
                 obetivo
               </Title>
-              <p className='max-w-xl font-light mt-15'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <p className='max-w-xl font-light mt-15 pb'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
               <section>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-38 mt-45 md:mt-66">
                   {item.map(({ id, icon, paragraph, title }) => (
@@ -139,7 +139,7 @@ const Main = () => {
               </div>
               <div className="lg:col-span-6">
                 <h3>{listMetodo.title}</h3>
-                <p>{listMetodo.paragraph}</p>
+                <p className='mb-66'>{listMetodo.paragraph}</p>
               </div>
             </div>
           </div>

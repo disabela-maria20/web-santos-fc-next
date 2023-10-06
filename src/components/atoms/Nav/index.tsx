@@ -13,7 +13,7 @@ const Nav = ({ open }: INavProps): JSX.Element => {
 	]
 
 	return (
-		<nav className="transition-[all] transform ease-in-out duration-200 left-0 top-79 md:top-0 md:w-auto absolute md:relative w-full">
+		<nav className="z-50 transition-[all] transform ease-in-out duration-200 left-0 top-79 md:top-0 md:w-auto absolute md:relative w-full">
 			<ul className={`nav origin-center ${open ? '-translate-x-full md:-translate-x-0' : '-translate-x-0'}`} >
 				{link.map(({name, id}) => (
 					<li className="py-22  md:py-0" key={id}>

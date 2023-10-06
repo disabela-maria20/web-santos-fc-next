@@ -51,7 +51,7 @@
   }
 
   .nav {
-    @apply flex sm:justify-between sm:items-center items-center flex-col md:flex-row transition transform ease-in w-full;
+    @apply relative bg-black bg-opacity-95 z-50 flex sm:justify-between sm:items-center items-center flex-col md:flex-row transition transform ease-in w-full;
   }
 
   .link-outline-black {
