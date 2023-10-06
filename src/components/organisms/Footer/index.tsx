@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { Contact } from '@/components/molecules'
 import React from 'react'
 
 const Footer = (): JSX.Element => {
@@ -6,6 +7,7 @@ const Footer = (): JSX.Element => {
   return (
     <>
       <footer className='bg-santos bg-cover' id="contato">
+        <Contact/>
         <div className="container m-auto p-15">
           <div className="grid lg:grid-cols-12 gap-y-31 md:gap-31 py-31 ">
             <div className="col-span-12 md:col-span-12 lg:col-span-3 items-center relative">
