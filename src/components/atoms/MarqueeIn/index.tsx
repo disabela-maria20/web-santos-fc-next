@@ -6,7 +6,7 @@ const MarqueeIn = () => {
 
   for (let index = 0; index < 10; index++) {
     divs.push(
-      <div key={index} className={`${index % 2 === 0 ? "font-bold" : "font-light"} px-8 inline-block`}>{frase}</div>
+      <div key={index} className={`${index % 2 === 0 ? "font-bold" : "font-light"} px-8 inline-block text-15`}>{frase}</div>
     )
   }
 

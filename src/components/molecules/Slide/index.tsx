@@ -27,11 +27,11 @@ const Slide = () => {
         <SwiperSlide key={id} className='mt-22 '>
           <div className='bg-gradient-to-r touch-pan-y from-yellow-100 to-yellow-200 rounded-xl overflow-auto p-18'>
             <div className='flex justify-between py-6 rounded-xl items-center bg-gradient-to-r from-black to-gray-200 text-white text-center '>
-              <img src="/img/pointed-star.png" alt="Estrela" className='p-15' />
-              <h3 className=''>
+              <img src="/img/pointed-star.png" alt="Estrela" className='px-15' />
+              <h3 className='text-26'>
                 {title}
               </h3>
-              <img src="/img/pointed-star.png" alt="Estrela" className='p-15' />
+              <img src="/img/pointed-star.png" alt="Estrela" className='px-15' />
             </div>
             <p className='pt-18'>{paragraph}</p>
           </div>

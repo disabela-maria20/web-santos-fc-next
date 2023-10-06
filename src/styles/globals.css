@@ -8,11 +8,11 @@
   }
 
   h1 {
-    @apply text-38 sm:text-45 md:text-55;
+    @apply text-38 sm:text-45 xxl:text-55;
   }
 
   h2 {
-    @apply font-semibold text-31 sm:text-38 md:text-45;
+    @apply font-semibold text-31 sm:text-38 ;
   }
 
   h3 {
@@ -21,7 +21,7 @@
 
   p,
   label {
-    @apply text-15 sm:text-[17px] xxl:text-18 leading-paragraph;
+    @apply text-15  xxl:text-18 leading-paragraph;
   }
 
   img {
@@ -51,7 +51,7 @@
   }
 
   .nav {
-    @apply relative bg-black bg-opacity-95 z-50 flex sm:justify-between sm:items-center items-center flex-col md:flex-row transition transform ease-in w-full;
+    @apply relative bg-black  bg-opacity-95 md:bg-opacity-0 z-50 flex sm:justify-between sm:items-center items-center flex-col md:flex-row transition transform ease-in w-full;
   }
 
   .link-outline-black {

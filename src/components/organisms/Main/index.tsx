@@ -23,15 +23,15 @@ const Main = () => {
     { id: 2, title: 'Título', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. ' },
   ]
   const listSVG: TypeItem = [
-    { id: 0, title: 'Lorem ipsum', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' },
-    { id: 1, title: 'Lorem ipsum', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' },
-    { id: 2, title: 'Lorem ipsum', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' },
-    { id: 3, title: 'Lorem ipsum', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' },
-    { id: 4, title: 'Lorem ipsum', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' },
+    { id: 0, title: 'Lorem ipsum 1', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' },
+    { id: 1, title: 'Lorem ipsum 2', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' },
+    { id: 2, title: 'Lorem ipsum 3', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' },
+    { id: 3, title: 'Lorem ipsum 4', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' },
+    { id: 4, title: 'Lorem ipsum 5', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' },
   ]
 
   const [listMetodo, setListMetodo] = useState<any>({
-    id: 0, title: 'Lorem ipsum', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    id: 0, title: 'Lorem ipsum 1', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
   })
   const [modal, setModal] = useState<boolean>(true)
   const svg = useRef<SVGAElement | null>(null)
@@ -73,7 +73,7 @@ const Main = () => {
                 <img src="/img/silhueta.png" alt="" className='' />
                 <img src="/img/meia-silhueta.png" alt="" className='absolute top-0 object-contain max-h-full' />
                 <div className='absolute bottom-0 w-full py-38'>
-                  <h4 className='text-white uppercase text-center text-38 font-light lg:text-55'>
+                  <h4 className='text-white uppercase text-center text-38 font-light lg:text-45 xxl:text-55 leading-title'>
                     <strong className='block font-extrabold'>Wladimir </strong>
                     Mattos
                   </h4>
@@ -107,23 +107,23 @@ const Main = () => {
         <section className='bg-santos bg-cover py-66 lg:py-95 mt-136'>
           <div className="container m-auto px-15">
             <Title>contato</Title>
-            <div className='grid grid-cols-1 lg:grid-cols-12 gap-45'>
+            <div className='grid grid-cols-1 lg:grid-cols-12 gap-45 mt-31'>
               <div className='lg:col-span-7'>
                 <label htmlFor="">
                   Nome
-                  <input type="text" className='w-full h-45 rounded-md px-15 mb-15' id='nome' />
+                  <input type="text" className='w-full h-38 xxl:h-45 rounded-md px-15 mb-15' id='nome' />
                 </label>
                 <label htmlFor="E-mail">
                   E-mail
-                  <input type="text" className='w-full h-45 rounded-md px-15 mb-15' id='E-mail' />
+                  <input type="text" className='w-full h-38 xxl:h-45 rounded-md px-15 mb-15' id='E-mail' />
                 </label>
                 <label htmlFor="Telefone">
                   Telefone
-                  <input type="text" className='w-full h-45 rounded-md px-15 mb-15' id='Telefone' />
+                  <input type="text" className='w-full h-38 xxl:h-45 rounded-md px-15 mb-15' id='Telefone' />
                 </label>
                 <label htmlFor="Mensagem">
                   Mensagem
-                  <textarea className='w-full h-79 lg:h-[250px] rounded-md px-15 mb-15' id='Mensagem' />
+                  <textarea className='w-full h-79 lg:h-[165px] rounded-md px-15 mb-15' id='Mensagem' />
                 </label>
                 <button className='bg-gradient-to-r from-yellow-100 to-yellow-200 text-black font-semibold px-18 py-8 rounded-2xl uppercase transition-colors  hover:from-yellow-200 hover:to-yellow-100'>enviar</button>
               </div>
