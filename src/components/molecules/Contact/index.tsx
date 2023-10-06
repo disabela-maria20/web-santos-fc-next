@@ -4,10 +4,17 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <section className=' py-66 lg:py-95 mt-136'>
+    <section className=' py-66 lg:py-95 mt-66'>
       <div className="container m-auto px-15">
-        <Title>contato</Title>
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-45 mt-31'>
+          
+          <div className="lg:col-span-5 hidden lg:block">
+            <div className='m-auto relative w-full'>
+                <Title>contato</Title>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos deserunt ratione quae ex quaerat itaque a voluptatum distinctio. Ad iusto quisquam, commodi eum rem voluptate tempore voluptas repudiandae fugiat ipsa?</p>
+              <img src="/img/logo.png" alt='logo do santos' width={250} height={250} className='pt-26 z-10 m-auto' />
+            </div>
+          </div>
           <div className='lg:col-span-7'>
             <label htmlFor="">
               Nome
@@ -26,11 +33,6 @@ const Contact = () => {
               <textarea className='w-full h-79 lg:h-[165px] rounded-md px-15 mb-15' id='Mensagem' />
             </label>
             <button className='bg-gradient-to-r from-yellow-100 to-yellow-200 text-black font-semibold px-18 py-8 rounded-2xl uppercase transition-colors  hover:from-yellow-200 hover:to-yellow-100'>enviar</button>
-          </div>
-          <div className="lg:col-span-5 hidden lg:block">
-            <div className='m-auto relative w-full flex justify-center items-center'>
-              <img src="/img/logo.png" alt='logo do santos' width={400} height={400} className=' z-10 m-auto' />
-            </div>
           </div>
         </div>
       </div>

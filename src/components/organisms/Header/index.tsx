@@ -9,7 +9,8 @@ const Header = (): JSX.Element => {
         <Menu />
         <section className='container m-auto px-15'>
           <h1 className='text-center font-light uppercase leading-title text-white text-31 sm:text-45 md:text-55  xxl:text-79 pt-45 md:pt-66'>Wladimir para um
-            <strong className='block font-bold'>novo Santos</strong>
+            <strong className='block font-bold'>Compromisso com </strong>
+            <strong className='block font-bold'>o Santos</strong>
           </h1>
         </section>
       </div>

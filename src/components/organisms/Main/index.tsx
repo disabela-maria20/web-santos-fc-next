@@ -126,7 +126,7 @@ const Main = () => {
         </div>
       </section> */}
         <section className='overflow-x-hidden' id='pilares'>
-          <div className="container m-auto px-15 py-66 md:py-95">
+          <div className="container m-auto px-15 py-66">
             <Title>Pilares</Title>
             <Slide />
           </div>
