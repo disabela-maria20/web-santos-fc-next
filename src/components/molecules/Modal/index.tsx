@@ -8,7 +8,7 @@ const Modal = ({ modal, setModal }: IModalProps) => {
       className={`bg-black bg-opacity-40 fixed top-0 px-15  left-0 z-50 flex items-center justify-center w-full h-[100vh]
         ${modal ? 'block' : 'hidden'}
       `}>
-      <div className='bg-white rounded-2xl sm:max-w-screen-lg  relative max-h-[600px] '>
+      <div className='bg-white rounded-2xl sm:max-w-screen-lg  relative lg:max-h-[600px] '>
         <div className="absolute -top-15 -right-15">
           <div className='transition-transform hover:scale-110 cursor-pointer bg-black text-white p-15 rounded-full w-45 h-45 flex justify-center items-center' onClick={() => setModal(!false)}>X</div>
         </div>
