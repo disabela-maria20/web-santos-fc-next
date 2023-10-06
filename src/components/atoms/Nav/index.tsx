@@ -9,7 +9,7 @@ const Nav = ({ open }: INavProps): JSX.Element => {
 		// { name: "Santos", id: "#santos" },
 		{ name: "Pilares", id: "#pilares" },
 		{ name: "Metodologia", id: "#metodologia" },
-		{ name: "Dúvidas", id: "#duvidas" },
+		{ name: "Contato", id: "#contato" },
 	]
 
 	return (
