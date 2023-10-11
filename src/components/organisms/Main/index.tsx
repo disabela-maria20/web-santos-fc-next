@@ -134,7 +134,7 @@ const Main = () => {
           </div>
         </div>
       </section> */}
-        <Fade>
+        <Fade direction='up'>
           <section className='overflow-x-hidden' id='pilares'>
             <div className="container m-auto px-15 py-66">
               <Title>Pilares</Title>
@@ -156,13 +156,26 @@ const Main = () => {
               <div className="lg:col-span-6">
                 <Slide direction='right'>
                   <h3>{listMetodo.title}</h3>
-                <p className='mb-66'>{listMetodo.paragraph}</p>
+                  <p className='mb-66'>{listMetodo.paragraph}</p>
                 </Slide>
               </div>
             </div>
           </div>
         </section>
-
+        <section className='container m-auto px-15'>
+          <Fade direction='up'>
+            <Title>
+              <div className='text-center mt-38 md:mt-79'>instagram</div>
+            </Title>
+            <div className='grid gap-22 md:grid-cols-5 mt-8 mb-38 md:mb-114'>
+              <img src="/img/elenco-santos-classico-palmeiras.webp" alt="" className='object-cover h-[250px]' />
+              <img src="/img/elenco-santos-classico-palmeiras.webp" alt="" className='object-cover h-[250px]'/>
+              <img src="/img/elenco-santos-classico-palmeiras.webp" alt="" className='object-cover h-[250px]'/>
+              <img src="/img/elenco-santos-classico-palmeiras.webp" alt="" className='object-cover h-[250px]'/>
+              <img src="/img/elenco-santos-classico-palmeiras.webp" alt="" className='object-cover h-[250px]'/>
+            </div>
+          </Fade>
+        </section>
       </main>
 
     </>
