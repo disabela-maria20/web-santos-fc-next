@@ -12,8 +12,8 @@ const Header = (): JSX.Element => {
           <Slide direction='up' duration={2000}>
             <h1 className='text-center font-light uppercase leading-title text-white text-31 sm:text-45 md:text-55  xxl:text-79 pt-45 md:pt-66'>
               Wladimir Mattos
-              <strong className='block font-bold'>Compromisso com </strong>
-              <strong className='block font-bold'>o Santos</strong>
+              <strong className='block font-bold'>JUNTOS PELO SANTOSFC </strong>
+              {/* <strong className='block font-bold'>o Santos</strong> */}
             </h1>
           </Slide>
 
