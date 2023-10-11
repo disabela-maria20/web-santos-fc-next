@@ -1,3 +1,4 @@
+import { FloatingLink } from '@/components/atoms'
 import { Footer, Header, Main } from '@/components/organisms'
 
 const THome = (): JSX.Element => {
@@ -5,6 +6,7 @@ const THome = (): JSX.Element => {
     <Header />
     <Main/>
     <Footer />
+    <FloatingLink/>
   </>
 }
 

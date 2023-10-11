@@ -5,4 +5,5 @@ export { default as Burger } from './Burger';
 export { default as Logo } from './Logo';
 export { default as Title } from './Title';
 export { default as MarqueeIn } from './MarqueeIn';
+export { default as FloatingLink } from './FloatingLink';
 export { SvgMetodologia } from './Svg';
