@@ -92,7 +92,7 @@ const Main = () => {
             <div className='lg:col-span-7'>
               <Slide direction='right' duration={1250}>
                 <Title>
-                  obetivo
+                  objetivo
                 </Title>
                 <p className='max-w-xl font-light mt-15 pb'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 
