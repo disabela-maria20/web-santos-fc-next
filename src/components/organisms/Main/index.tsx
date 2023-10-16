@@ -1,114 +1,211 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
-import { SvgMetodologia, Title } from '@/components/atoms'
-import { Modal, Slide as Pilares } from '@/components/molecules'
-import { useEffect, useRef, useState } from 'react'
-import { Fade, Slide } from 'react-awesome-reveal'
+import { SvgMetodologia, Title } from "@/components/atoms";
+import { Modal, Slide as Pilares } from "@/components/molecules";
+import { useModal } from "@/context/Modal";
+import { useEffect, useRef, useState } from "react";
+import { Fade, Slide } from "react-awesome-reveal";
 
 type TypeItem = {
-  id: number,
-  icon?: string,
-  title: string,
-  paragraph: string
-}[]
+  id: number;
+  icon?: string;
+  title: string;
+  paragraph: string;
+}[];
 
 const Main = () => {
   const item: TypeItem = [
-    { id: 0, icon: 'presentation.png', title: 'Título 1', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-    { id: 1, icon: 'layers.png', title: 'Título 2', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-    { id: 2, icon: 'to-do-list.png', title: 'Título 3', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-  ]
+    {
+      id: 0,
+      icon: "presentation.png",
+      title: "Título 1",
+      paragraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      id: 1,
+      icon: "layers.png",
+      title: "Título 2",
+      paragraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      id: 2,
+      icon: "to-do-list.png",
+      title: "Título 3",
+      paragraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+  ];
   const list: TypeItem = [
-    { id: 0, title: 'Título', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. ' },
-    { id: 1, title: 'Título', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. ' },
-    { id: 2, title: 'Título', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. ' },
-  ]
+    {
+      id: 0,
+      title: "Título",
+      paragraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. ",
+    },
+    {
+      id: 1,
+      title: "Título",
+      paragraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. ",
+    },
+    {
+      id: 2,
+      title: "Título",
+      paragraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. ",
+    },
+  ];
   const listSVG: TypeItem = [
-    { id: 0, title: 'Lorem ipsum 1', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' },
-    { id: 1, title: 'Lorem ipsum 2', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' },
-    { id: 2, title: 'Lorem ipsum 3', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' },
-    { id: 3, title: 'Lorem ipsum 4', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' },
-    { id: 4, title: 'Lorem ipsum 5', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' },
-  ]
+    {
+      id: 0,
+      title: "Lorem ipsum 1",
+      paragraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    },
+    {
+      id: 1,
+      title: "Lorem ipsum 2",
+      paragraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    },
+    {
+      id: 2,
+      title: "Lorem ipsum 3",
+      paragraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    },
+    {
+      id: 3,
+      title: "Lorem ipsum 4",
+      paragraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    },
+    {
+      id: 4,
+      title: "Lorem ipsum 5",
+      paragraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    },
+  ];
 
   const [listMetodo, setListMetodo] = useState<any>({
-    id: 0, title: 'Lorem ipsum 1', paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
-  })
-  const [modal, setModal] = useState<boolean>(true)
-  const svg = useRef<SVGAElement | null>(null)
+    id: 0,
+    title: "Lorem ipsum 1",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+  });
+
+  const svg = useRef<SVGAElement | null>(null);
 
   useEffect(() => {
     const { current } = svg;
-    const circles = current?.querySelectorAll('circle');
+    const circles = current?.querySelectorAll("circle");
     function handleClick(svg: SVGCircleElement, index: number) {
-      setListMetodo(listSVG[index])
+      setListMetodo(listSVG[index]);
       circles?.forEach((item) => {
-        item.classList.remove('active');
+        item.classList.remove("active");
       });
-      svg.classList.add('active');
+      svg.classList.add("active");
     }
 
     if (current) {
       circles?.forEach((item, index) => {
-        item.addEventListener('click', () => handleClick(item, index));
+        item.addEventListener("click", () => handleClick(item, index));
       });
 
       return () => {
         circles?.forEach((item, index) => {
-          item.removeEventListener('click', () => handleClick(item, index));
+          item.removeEventListener("click", () => handleClick(item, index));
         });
       };
     }
   }, []);
 
+  const { openModal } = useModal();
 
-
+  const handleOpenModal = () => {
+    const modalContent = <div>Conteúdo do Modal</div>;
+    openModal(modalContent);
+  };
   return (
     <>
-      <Modal modal={!modal} setModal={setModal} />
-      <main className='pt-136 overflow-x-hidden'>
-        <div className="container m-auto px-15" id='objetivo'>
+      <main className="pt-136 overflow-x-hidden">
+        <div className="container m-auto px-15" id="objetivo">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-45 ">
-            <div className='lg:col-span-5'>
+            <div className="lg:col-span-5">
               <Slide cascade>
-                <section className='bg-black rounded-3xl relative h-full'>
-                  <img src="/img/silhueta.png" alt="" className='' />
-                  <img src="/img/meia-silhueta.png" alt="" className='absolute top-0 object-contain max-h-full' />
-                  <div className='absolute bottom-0 w-full py-38'>
-                    <h4 className='text-white uppercase text-center text-38 font-light lg:text-45 xxl:text-55 leading-title'>
-                      <strong className='block font-extrabold'>Wladimir </strong>
+                <section className="bg-black rounded-3xl relative h-full">
+                  <img src="/img/silhueta.png" alt="" className="" />
+
+                  <div className="absolute bottom-0 w-full py-38">
+                    <h4 className="text-white uppercase text-center text-38 font-light lg:text-45 xxl:text-55 leading-title">
+                      <strong className="block font-extrabold">
+                        Wladimir{" "}
+                      </strong>
                       Mattos
                     </h4>
-                    <div className='flex justify-center items-center '>
-                      <img src="/img/pointed-star.png" alt="Estrela" className='p-15' />
-                      <button onClick={() => setModal(!modal)} className='bg-gradient-to-r from-yellow-100 to-yellow-200 text-black font-semibold px-18 py-8 rounded-2xl uppercase transition-colors  hover:from-yellow-200 hover:to-yellow-100'>Saiba mais</button>
-                      <img src="/img/pointed-star.png" alt="Estrela" className='p-15' />
+                    <div className="flex justify-center items-center ">
+                      <img
+                        src="/img/pointed-star.png"
+                        alt="Estrela"
+                        className="p-15"
+                      />
+                      <button
+                        onClick={handleOpenModal}
+                        className="bg-gradient-to-r from-yellow-100 to-yellow-200 text-black font-semibold px-18 py-8 rounded-2xl uppercase transition-colors  hover:from-yellow-200 hover:to-yellow-100"
+                      >
+                        Saiba mais
+                      </button>
+                      <img
+                        src="/img/pointed-star.png"
+                        alt="Estrela"
+                        className="p-15"
+                      />
                     </div>
                   </div>
                 </section>
-              </Slide >
-
+              </Slide>
             </div>
-            <div className='lg:col-span-7'>
-              <Slide direction='right' duration={1250}>
-                <Title>
-                  objetivo
-                </Title>
-                <p className='max-w-xl font-light mt-15 pb'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-
+            <div className="lg:col-span-7">
+              <Slide direction="right" duration={1250}>
+                <Title>objetivo</Title>
+                <p className="max-w-xl text-15 xxl:text-18 font-light mt-15 pb">
+                  No momento em que se aproximam as eleições no Santos Futebol
+                  Clube, nós da chapa JUNTOS PELO SANTOS assumimos o compromisso
+                  com a transparência, responsabilidade financeira,
+                  profissionalismo, vanguarda na gestão e geração de resultados
+                  esportivos e, sobretudo com o torcedor e o associado.
+                </p>
+                <p className="max-w-xl text-15 xxl:text-18 font-light mt-15 pb">
+                  Este plano surgiu em conversas e reuniões com associados de
+                  diversos grupos de santistas que contribuíram com ideias e
+                  sugestões, baseadas em experiencias profissionais e também na
+                  participação ativa na vida do clube. Elas refletem aquilo que
+                  acreditamos, um modelo de gestão baseado em uma estrutura
+                  profissional que será responsável pela execução das
+                  prioridades estabelecidas e que se traduzam em resultados
+                  esportivos que devolvam ao Santos Futebol Clube, a condição de
+                  protagonista do futebol brasileiro e mundial, sem comprometer
+                  as finanças do clube.
+                </p>
 
                 <section>
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-38 mt-45 md:mt-66">
                     {item.map(({ id, icon, paragraph, title }) => (
                       <div key={id}>
-                        <img src={`/img/${icon}`} alt={title} className='w-full h-95 object-contain mb-22' />
-                        <h3 className='text-center lg:text-left'>{title}</h3>
-                        <p className='text-15'>{paragraph}</p>
+                        <img
+                          src={`/img/${icon}`}
+                          alt={title}
+                          className="w-full h-95 object-contain mb-22"
+                        />
+                        <h3 className="text-center lg:text-left">{title}</h3>
+                        <p className="text-15">{paragraph}</p>
                       </div>
                     ))}
                   </div>
                 </section>
-
               </Slide>
             </div>
           </div>
@@ -134,8 +231,8 @@ const Main = () => {
           </div>
         </div>
       </section> */}
-        <Fade direction='up'>
-          <section className='overflow-x-hidden' id='pilares'>
+        <Fade direction="up">
+          <section className="overflow-x-hidden" id="pilares">
             <div className="container m-auto px-15 py-66">
               <Title>Pilares</Title>
               <Pilares />
@@ -143,9 +240,8 @@ const Main = () => {
           </section>
         </Fade>
 
-        <section id='metodologia' className='overflow-x-hidden'>
+        <section id="metodologia" className="overflow-x-hidden">
           <div className="container m-auto px-15">
-
             <Title>Metodologia</Title>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-45">
               <div className="lg:col-span-6 ">
@@ -154,33 +250,51 @@ const Main = () => {
                 </Slide>
               </div>
               <div className="lg:col-span-6">
-                <Slide direction='right'>
+                <Slide direction="right">
                   <h3>{listMetodo.title}</h3>
-                  <p className='mb-66'>{listMetodo.paragraph}</p>
+                  <p className="mb-66">{listMetodo.paragraph}</p>
                 </Slide>
               </div>
             </div>
           </div>
         </section>
-        <section className='container m-auto px-15'>
-          <Fade direction='up'>
+        <section className="container m-auto px-15">
+          <Fade direction="up">
             <Title>
-              <div className='text-center mt-38 md:mt-79'>instagram</div>
+              <div className="text-center mt-38 md:mt-79">instagram</div>
             </Title>
-            <div className='grid gap-22 md:grid-cols-5 mt-8 mb-38 md:mb-114'>
-              <img src="/img/elenco-santos-classico-palmeiras.webp" alt="" className='object-cover h-[250px]' />
-              <img src="/img/elenco-santos-classico-palmeiras.webp" alt="" className='object-cover h-[250px]'/>
-              <img src="/img/elenco-santos-classico-palmeiras.webp" alt="" className='object-cover h-[250px]'/>
-              <img src="/img/elenco-santos-classico-palmeiras.webp" alt="" className='object-cover h-[250px]'/>
-              <img src="/img/elenco-santos-classico-palmeiras.webp" alt="" className='object-cover h-[250px]'/>
+            <div className="grid gap-22 md:grid-cols-5 mt-8 mb-38 md:mb-114">
+              <img
+                src="/img/elenco-santos-classico-palmeiras.webp"
+                alt=""
+                className="object-cover h-[250px]"
+              />
+              <img
+                src="/img/elenco-santos-classico-palmeiras.webp"
+                alt=""
+                className="object-cover h-[250px]"
+              />
+              <img
+                src="/img/elenco-santos-classico-palmeiras.webp"
+                alt=""
+                className="object-cover h-[250px]"
+              />
+              <img
+                src="/img/elenco-santos-classico-palmeiras.webp"
+                alt=""
+                className="object-cover h-[250px]"
+              />
+              <img
+                src="/img/elenco-santos-classico-palmeiras.webp"
+                alt=""
+                className="object-cover h-[250px]"
+              />
             </div>
           </Fade>
         </section>
       </main>
-
     </>
+  );
+};
 
-  )
-}
-
-export default Main
+export default Main;
