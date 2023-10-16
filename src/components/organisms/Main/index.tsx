@@ -231,7 +231,7 @@ const Main = () => {
           </div>
         </div>
       </section> */}
-        <Fade direction="up">
+        {/* <Fade direction="up">
           <section className="overflow-x-hidden" id="pilares">
             <div className="container m-auto px-15 py-66">
               <Title>Pilares</Title>
@@ -291,7 +291,7 @@ const Main = () => {
               />
             </div>
           </Fade>
-        </section>
+        </section> */}
       </main>
     </>
   );
