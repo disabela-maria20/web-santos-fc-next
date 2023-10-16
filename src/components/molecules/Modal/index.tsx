@@ -33,7 +33,7 @@ const Modal = () => {
               <strong className="block font-extrabold">Wladimir </strong>
               Mattos
             </h4>
-            <div className="lg:max-h-[300px] overflow-y-auto">
+            <div className=" max-h-[150px] lg:max-h-[300px] overflow-y-auto">
               <p className="mb-13">Permitam que me apresente. </p>
 
               <p className="mb-13">
