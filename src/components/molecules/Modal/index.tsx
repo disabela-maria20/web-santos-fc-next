@@ -34,9 +34,10 @@ const Modal = () => {
               Mattos
             </h4>
             <div className="lg:max-h-[300px] overflow-y-auto">
+              <p>Permitam que me apresente. </p>
               <p className="mb-13">
-                Permitam que me apresente. Sou Wladimir Mattos, pré-candidato a
-                presidente do Santos Futebol Clube.
+                Sou Wladimir Mattos, pré-candidato a presidente do Santos
+                Futebol Clube.
               </p>
               <p className="mb-13">
                 Antes de tudo, quero saudar todos os torcedores e associados de

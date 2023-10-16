@@ -135,7 +135,7 @@ const Main = () => {
         <div className="container m-auto px-15" id="objetivo">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-45 ">
             <div className="lg:col-span-5">
-              <Slide cascade>
+              <>
                 <section className="bg-black rounded-3xl relative h-full">
                   <img src="/img/silhueta.png" alt="" className="" />
 
@@ -166,7 +166,7 @@ const Main = () => {
                     </div>
                   </div>
                 </section>
-              </Slide>
+              </>
             </div>
             <div className="lg:col-span-7">
               <Slide direction="right" duration={1250}>
@@ -191,7 +191,7 @@ const Main = () => {
                   as finanças do clube.
                 </p>
 
-                <section>
+                {/* <section>
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-38 mt-45 md:mt-66">
                     {item.map(({ id, icon, paragraph, title }) => (
                       <div key={id}>
@@ -205,7 +205,7 @@ const Main = () => {
                       </div>
                     ))}
                   </div>
-                </section>
+                </section> */}
               </Slide>
             </div>
           </div>
