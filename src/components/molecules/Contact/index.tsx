@@ -9,7 +9,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-45 mt-31">
           <div className="lg:col-span-5 hidden lg:block">
             <div className="m-auto relative w-full">
-              <Slide>
+              <>
                 <Title>contato</Title>
                 {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos deserunt ratione quae ex quaerat itaque a voluptatum distinctio. Ad iusto quisquam, commodi eum rem voluptate tempore voluptas repudiandae fugiat ipsa?</p> */}
                 <img
@@ -19,7 +19,7 @@ const Contact = () => {
                   height={250}
                   className="pt-26 z-10 m-auto"
                 />
-              </Slide>
+              </>
             </div>
           </div>
           <div className="lg:col-span-7">
