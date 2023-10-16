@@ -8,8 +8,8 @@ const Nav = ({ open }: INavProps): JSX.Element => {
   const link: TypeLink = [
     { name: "Objetivo", id: "#objetivo" },
     // { name: "Santos", id: "#santos" },
-    { name: "Pilares", id: "#pilares" },
-    { name: "Metodologia", id: "#metodologia" },
+    // { name: "Pilares", id: "#pilares" },
+    // { name: "Metodologia", id: "#metodologia" },
     // { name: "Contato", id: "#contato" },
   ];
   const { openModal } = useModal();
