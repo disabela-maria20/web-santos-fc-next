@@ -7,7 +7,7 @@ const Modal = () => {
 
   return isModalOpen ? (
     <article
-      className={`bg-black bg-opacity-40 fixed top-0 px-15  left-0 z-50 flex items-center justify-center w-full h-[100vh]
+      className={`bg-black bg-opacity-40 fixed top-0 px-15  left-0 z-[9999] flex items-center justify-center w-full h-[100vh]
         ${isModalOpen ? "block" : "hidden"}
       `}
     >
