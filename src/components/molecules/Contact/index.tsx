@@ -4,7 +4,7 @@ import { Slide } from "react-awesome-reveal";
 
 const Contact = () => {
   return (
-    <section className=" py-66 lg:py-95">
+    <section className="mt-38 py-66 lg:py-95">
       <div className="container m-auto px-15">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-45 mt-31">
           <div className="lg:col-span-5 hidden lg:block">
