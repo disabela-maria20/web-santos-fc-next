@@ -133,11 +133,11 @@ const Main = () => {
     <>
       <main className="pt-136 overflow-x-hidden">
         <div className="container m-auto px-15" id="objetivo">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-45 ">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-45 mb-45 md:mb-95">
             <div className="lg:col-span-5">
               <>
                 <section className="bg-black rounded-3xl relative h-full">
-                  <img src="/img/silhueta.png" alt="" className="" />
+                  <img src="/img/silhueta.png" alt="" className=" w-full h-full object-contain" />
 
                   <div className="absolute bottom-0 w-full py-38">
                     <h4 className="text-white uppercase text-center text-38 font-light lg:text-45 xxl:text-55 leading-title">
@@ -169,16 +169,16 @@ const Main = () => {
               </>
             </div>
             <div className="lg:col-span-7">
-              <Slide direction="right" duration={1250}>
+              <>
                 <Title>objetivo</Title>
-                <p className="max-w-xl text-15 xxl:text-18 font-light mt-15 pb">
+                <p className="mt-15 ">
                   No momento em que se aproximam as eleições no Santos Futebol
                   Clube, nós da chapa JUNTOS PELO SANTOS assumimos o compromisso
                   com a transparência, responsabilidade financeira,
                   profissionalismo, vanguarda na gestão e geração de resultados
                   esportivos e, sobretudo com o torcedor e o associado.
                 </p>
-                <p className="max-w-xl text-15 xxl:text-18 font-light mt-15 pb">
+                <p className="mt-15 ">
                   Este plano surgiu em conversas e reuniões com associados de
                   diversos grupos de santistas que contribuíram com ideias e
                   sugestões, baseadas em experiencias profissionais e também na
@@ -191,7 +191,7 @@ const Main = () => {
                   as finanças do clube.
                 </p>
 
-                {/* <section>
+                <section>
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-38 mt-45 md:mt-66">
                     {item.map(({ id, icon, paragraph, title }) => (
                       <div key={id}>
@@ -205,13 +205,13 @@ const Main = () => {
                       </div>
                     ))}
                   </div>
-                </section> */}
-              </Slide>
+                </section>
+              </>
             </div>
           </div>
         </div>
 
-        {/* <section className='bg-santos bg-cover py-66 lg:py-95'>
+         {/* <section className='bg-santos bg-cover py-66 lg:py-95'>
         <div className="container m-auto px-15">
           <Title>Santos</Title>
           <div className='grid grid-cols-1 lg:grid-cols-12 gap-45'>
@@ -230,36 +230,36 @@ const Main = () => {
             </div>
           </div>
         </div>
-      </section> */}
-        {/* <Fade direction="up">
+      </section>  */}
+         <>
           <section className="overflow-x-hidden" id="pilares">
             <div className="container m-auto px-15 py-66">
               <Title>Pilares</Title>
               <Pilares />
             </div>
           </section>
-        </Fade>
+        </>
 
         <section id="metodologia" className="overflow-x-hidden">
           <div className="container m-auto px-15">
             <Title>Metodologia</Title>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-45">
               <div className="lg:col-span-6 ">
-                <Slide>
+                <>
                   <SvgMetodologia item={svg} />
-                </Slide>
+                </>
               </div>
               <div className="lg:col-span-6">
-                <Slide direction="right">
+                <>
                   <h3>{listMetodo.title}</h3>
                   <p className="mb-66">{listMetodo.paragraph}</p>
-                </Slide>
+                </>
               </div>
             </div>
           </div>
         </section>
         <section className="container m-auto px-15">
-          <Fade direction="up">
+          <>
             <Title>
               <div className="text-center mt-38 md:mt-79">instagram</div>
             </Title>
@@ -290,8 +290,8 @@ const Main = () => {
                 className="object-cover h-[250px]"
               />
             </div>
-          </Fade>
-        </section> */}
+          </>
+        </section> 
       </main>
     </>
   );

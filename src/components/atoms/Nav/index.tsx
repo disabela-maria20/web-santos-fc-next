@@ -8,8 +8,8 @@ const Nav = ({ open }: INavProps): JSX.Element => {
   const link: TypeLink = [
     { name: "Objetivo", id: "#objetivo" },
     // { name: "Santos", id: "#santos" },
-    // { name: "Pilares", id: "#pilares" },
-    // { name: "Metodologia", id: "#metodologia" },
+    { name: "Pilares", id: "#pilares" },
+    { name: "Metodologia", id: "#metodologia" },
     // { name: "Contato", id: "#contato" },
   ];
   const { openModal } = useModal();
@@ -35,13 +35,13 @@ const Nav = ({ open }: INavProps): JSX.Element => {
               </Link>
             </li>
           ))}
-          {/* <li className="py-22  md:py-0">
+          <li className="py-22  md:py-0">
             <Link href="/galeria">
               <span className="text-white font-bold text-15 xxl:text-18 md:px-26 hover:text-yellow-100 transition-all font-roboto">
                 Galeria
               </span>
             </Link>
-          </li> */}
+          </li>
 
           <li className="py-22  md:py-0" onClick={handleOpenModal}>
             <span className="text-white font-bold text-15 xxl:text-18 md:px-26 hover:text-yellow-100 transition-all font-roboto">

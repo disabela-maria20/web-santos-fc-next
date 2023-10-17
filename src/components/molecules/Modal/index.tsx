@@ -33,65 +33,24 @@ const Modal = () => {
               <strong className="block font-extrabold">Wladimir </strong>
               Mattos
             </h4>
-            <div className=" max-h-[150px] lg:max-h-[300px] overflow-y-auto">
-              <p className="mb-13">Permitam que me apresente. </p>
-
-              <p className="mb-13">
-                Sou Wladimir Mattos, pré-candidato a presidente do Santos
-                Futebol Clube.
-              </p>
-              <p className="mb-13">
-                Antes de tudo, quero saudar todos os torcedores e associados de
-                nosso clube e dizer que faço parte dessa paixão.
-              </p>
-              <p className="mb-13">
-                Tenho 58 anos, formado em Administração de Empresas e com
-                licenciatura em História.
-              </p>
-              <p className="mb-13">
-                Sou casado, pai de três filhas e um filho. Uma família
-                maravilhosa.
-              </p>
-              <p className="mb-13">
-                Como empresário atuo no setor portuário desde 1980.
-              </p>
-              <p className="mb-13">
-                No futebol, atuei como gestor de dois clubes na Baixada
-                Santista, tanto no departamento profissional quanto na base,
-                através de uma empresa em que me retirei da Sociedade para
-                concorrer a presidência do Santos FC.
-              </p>
-              <p className="mb-13">
-                Fui duas vezes eleito conselheiro do SFC nas eleições de 2014 e
-                2017, onde tive atuação incisiva na defesa dos interesses de
-                nosso clube.
-              </p>
-              <p className="mb-13">
-                Um grupo de santistas me desafiou para liderar um Projeto de
-                Reconstrução do Santos FC. Gente jovem reunida com os mais
-                experientes, o que me deu a certeza de estar em boa companhia.
-              </p>
-              <p className="mb-13">
-                Gosto de desafios. Sei como trabalhar em equipe.
-              </p>
-              <p className="mb-13">
-                Nossos objetivos, ideias e premissas se transformaram em Plano
-                de Governo que mostrarei a seguir através de Compromissos com o
-                SFC.
-              </p>
-              <p className="mb-13">
-                Durante a campanha, que será lançada oficialmente em 23 de
-                outubro, iremos discorrendo e debatendo item por item nas mais
-                diversas formas.
-              </p>
-              <p className="mb-13">
-                Temos quatro grandes assuntos e inúmeros outros não menos
-                importantes, para mostrar.
-              </p>
+            <div className="max-h-[50vh] lg:max-h-[300px] overflow-y-auto">
+              <p className="pt-13">Querido santista,</p>
+              <p className="pt-13">Sou Wladimir Mattos, pré-candidato a presidente do nosso Santos Futebol Clube.</p>
+              <p className="pt-13">Antes de tudo, quero saudar a todos os torcedores e associados e dizer que faço parte dessa paixão.</p>
+              <p className="pt-13">Tenho 58 anos, formado em Administração de Empresas e com licenciatura em História.</p>
+              <p className="pt-13">Sou casado, pai de três filhas e um filho. Uma família maravilhosa!</p>
+              <p className="pt-13">Como empresário, atuo no setor portuário desde 1980.</p>
+              <p className="pt-13">No futebol, atuei como gestor de dois clubes na Baixada, tanto no departamento profissional quanto na base, por meio de uma empresa da qual me retirei para concorrer à presidência do Santos FC.</p>
+              <p className="pt-13">Fui duas vezes eleito conselheiro do SFC, nas eleições de 2014 e 2017, mandatos em que tive atuação incisiva na defesa dos interesses de nosso clube.</p>
+              <p className="pt-13">Um grupo de santistas me desafiou a liderar um Projeto de Reconstrução do Santos FC. Gente jovem reunida com os mais experientes, o que me deu a certeza de estar em boa companhia.</p>
+              <p className="pt-13">Gosto de desafios. Gosto de trabalhar em equipe.</p>
+              <p className="pt-13">Nossos objetivos, ideias e premissas se transformaram em Plano de Governo, que mostrarei a seguir no documento Compromissos com o SFC.</p>
+              <p className="pt-13">Durante a campanha, que será lançada oficialmente em 23 de outubro, discorreremos e debateremos item por item, de forma profunda e participativa.</p>
+              <p className="pt-13">Estou confiante de que, com sua ajuda, vamos recolocar o Santos no caminho das vitórias. Convido a todos vocês para me acompanhar no maior desafio da minha vida.</p>
             </div>
           </div>
-          <div className="p-15 lg:pr-18 ">
-            <img src="/img/foto1.png" alt="silhueta" className="mb-18" />
+          <div className="p-15 grid grid-cols-2 gap-8 md:grid-cols-1">
+            <img src="/img/foto1.png" alt="silhueta"/>
             <img src="/img/foto2.png" alt="silhueta" />
           </div>
         </div>

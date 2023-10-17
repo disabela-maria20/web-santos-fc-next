@@ -23,7 +23,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="lg:col-span-7">
-            <Slide direction="right">
+            <>
               <label htmlFor="">
                 Nome
                 <input
@@ -58,7 +58,7 @@ const Contact = () => {
               <button className="bg-gradient-to-r from-yellow-100 to-yellow-200 text-black font-semibold px-18 py-8 rounded-2xl uppercase transition-colors  hover:from-yellow-200 hover:to-yellow-100">
                 enviar
               </button>
-            </Slide>
+            </>
           </div>
         </div>
       </div>

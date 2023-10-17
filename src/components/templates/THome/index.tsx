@@ -7,7 +7,7 @@ const THome = (): JSX.Element => {
       <Header />
       <Main />
       <Footer />
-      {/* <FloatingLink/> */}
+      <FloatingLink/>
     </>
   );
 };

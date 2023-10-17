@@ -139,3 +139,16 @@ circle {
 html {
   scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  background:  #ebebeb; 
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000; 
+  border-radius: 10px;
+}
+
