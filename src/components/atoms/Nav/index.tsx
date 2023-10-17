@@ -44,7 +44,7 @@ const Nav = ({ open }: INavProps): JSX.Element => {
           </li>
 
           <li className="py-22  md:py-0" onClick={handleOpenModal}>
-            <span className="text-white font-bold text-15 xxl:text-18 md:px-26 hover:text-yellow-100 transition-all font-roboto">
+            <span className="text-white cursor-pointer font-bold text-15 xxl:text-18 md:px-26 hover:text-yellow-100 transition-all font-roboto">
               Biografia
             </span>
           </li>
